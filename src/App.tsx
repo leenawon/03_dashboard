@@ -1,5 +1,5 @@
-import Admin from './pages/dashboard/Dashboard';
+import Dashboard from './pages/dashboard/Dashboard';
 
 export default function App() {
-  return <Admin />;
+  return <Dashboard />;
 }
