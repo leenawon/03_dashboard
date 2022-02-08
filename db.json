@@ -61,6 +61,7 @@
       "client": "F 업체",
       "due": "2020.12.09",
       "docs": 1,
+      "count": 1,
       "amount": 20,
       "method": ["밀링"],
       "material": ["강철"],
