@@ -1,6 +1,6 @@
 ## 배포 주소
 
-<a href="https://gilpop8663.github.io/03_dashboard/">데시보드 페이지</a>
+<a href="https://gilpop8663.github.io/03_dashboard/">대시보드 페이지</a>
 
 ## 💻 설치 방법
 ```
@@ -58,18 +58,6 @@ src
  ┗ index.tsx
 ```
 
-## 📋개발 진행 상황 공유
-
-<img width="952" alt="스크린샷 2022-02-09 오전 2 42 19" src="https://user-images.githubusercontent.com/91244500/153044840-4b2231bb-2323-4086-aad8-377874414505.png">
-
-### 프로젝트 과정 소개
-
-| 슬랙을 이용한 소통                                                                                                             |                                                       게더를 활용한 소통                                                       |
-| :----------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: |
-| <img width="auto" src="https://user-images.githubusercontent.com/80146176/153052997-f2ca6637-40f8-4e7f-9609-f4885577706a.png"> | <img width="auto" src="https://user-images.githubusercontent.com/80146176/153053947-7be40938-62f8-4dd9-a54b-7328ea550546.png"> |
-| 노션에서의 소통                                                                                                                |                                                     화면공유를 활용한 소통                                                     |
-| <img width="auto" src="https://user-images.githubusercontent.com/80146176/153054588-6194940a-a76d-4fde-a164-2efb3989d6e8.png"> | <img width="auto" src="https://user-images.githubusercontent.com/80146176/153054110-d7c4169e-3824-4903-8ca5-fc4aec044055.png"> |
-
 ## 📝 기능
 
 ### 대시보드 페이지 HTML 구조 작업
@@ -106,3 +94,17 @@ src
 ### 반응형 컴포넌트
 
 - Media query 를 사용하여 지정한 width 값 미만 일 때 styled-component 속성을 변경하여 반응형 구현
+
+
+## 📋개발 진행 상황 공유
+
+<img width="952" alt="스크린샷 2022-02-09 오전 2 42 19" src="https://user-images.githubusercontent.com/91244500/153044840-4b2231bb-2323-4086-aad8-377874414505.png">
+
+### 프로젝트 과정 소개
+
+| 슬랙을 이용한 소통                                                                                                             |                                                       게더를 활용한 소통                                                       |
+| :----------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: |
+| <img width="auto" src="https://user-images.githubusercontent.com/80146176/153052997-f2ca6637-40f8-4e7f-9609-f4885577706a.png"> | <img width="auto" src="https://user-images.githubusercontent.com/80146176/153053947-7be40938-62f8-4dd9-a54b-7328ea550546.png"> |
+| 노션에서의 소통                                                                                                                |                                                     화면공유를 활용한 소통                                                     |
+| <img width="auto" src="https://user-images.githubusercontent.com/80146176/153054588-6194940a-a76d-4fde-a164-2efb3989d6e8.png"> | <img width="auto" src="https://user-images.githubusercontent.com/80146176/153054110-d7c4169e-3824-4903-8ca5-fc4aec044055.png"> |
+
