@@ -3,11 +3,11 @@ import ToggleStyle from 'assets/styles/ToggleStyle';
 const { Container, CheckboxContainer, CheckboxLabel, Input, Consultation } =
   ToggleStyle;
 
-interface Iprops {
+interface ToggleProps {
   toggleClick: () => void;
 }
 
-export function Toggle({ toggleClick }: Iprops) {
+export function Toggle({ toggleClick }: ToggleProps) {
   return (
     <Container>
       <CheckboxContainer>
