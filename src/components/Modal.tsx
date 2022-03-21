@@ -1,6 +1,6 @@
-import ModalStyle from 'assets/styles/ModalStyle';
 import { useState, useEffect } from 'react';
 import { MENU, COLOR_LOGO, GRAY_ICON } from 'assets/images';
+import ModalStyle from 'assets/styles/ModalStyle';
 
 const {
   MenuIcon,
@@ -26,8 +26,9 @@ export default function Modal() {
       document.body.style.overflow = 'auto';
     }
   }, [modal]);
+
   const toggleModal = () => {
-    setModal(!modal);
+    setModal((curr) => !curr);
   };
 
   return (
