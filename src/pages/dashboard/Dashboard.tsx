@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import { useRequestApi, IRequestInfoProps } from '../../hooks';
-import { Card, Menu } from '../../components';
-import { DashboardStyle } from 'assets/styles';
-import Nav from '../../components/Nav';
-import Header from 'components/Header';
+import { CardInfoProps } from 'utils/type';
+import { useRequestApi } from 'hooks';
+import { Card } from 'components';
 import { NoResults } from 'components/NoResults';
+import Header from 'components/Header';
+import Nav from 'components/Nav';
+import { DashboardStyle } from 'assets/styles';
 const { Container, Grid } = DashboardStyle;
 
 export default function Dashboard() {
-  const [data, setData] = useState<Array<IRequestInfoProps>>([]);
-  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [cardData, setCardData] = useState<Array<CardInfoProps>>([]);
   const [params, setParams] = useState<{
     method?: string;
     material?: string;
@@ -29,25 +29,20 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (!response) return;
-    setData(response.data);
+    setCardData(response.data);
   }, [response]);
 
   return (
     <>
+      {!cardData.length && <NoResults />}
       <Nav />
       <Container>
-        <Header
-          params={params}
-          setParams={setParams}
-          setShowMenu={setShowMenu}
-        />
+        <Header params={params} setParams={setParams} />
         <Grid>
-          {data.map((data: IRequestInfoProps) => (
+          {cardData.map((data: CardInfoProps) => (
             <Card key={data.id} data={data} />
           ))}
         </Grid>
-        {!data.length && <NoResults />}
-        {showMenu && <Menu />}
       </Container>
     </>
   );
