@@ -1,6 +1,6 @@
 import Modal from './Modal';
 import NavStyle from '../assets/styles/NavStyle';
-import { LOGO, WHITE_ICON, MENU } from 'assets/images';
+import { LOGO, WHITE_ICON } from 'assets/images';
 const {
   NavBar,
   LeftLogo,
@@ -17,11 +17,11 @@ export default function Nav() {
     <NavBar>
       <MenuIconAndLogo>
         <Modal />
-        <LeftLogo src={LOGO} alt="좌측 로고" />
+        <LeftLogo src={LOGO} alt="페이지 로고" />
       </MenuIconAndLogo>
       <RightLogoBox>
         <IconAndText>
-          <CompanyIcon src={WHITE_ICON} alt="로고 이미지" />
+          <CompanyIcon src={WHITE_ICON} alt="가공업체 아이콘" />
           <CompanyText>A 가공업체</CompanyText>
         </IconAndText>
         <LogOutText>로그아웃</LogOutText>
