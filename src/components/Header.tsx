@@ -69,27 +69,27 @@ export default function Header({ params, setParams, setShowMenu }: IProps) {
     setShowMethod(false);
   };
 
-  function onChangeMethod(i: number) {
-    if (method.includes(i)) {
-      const arr = method.filter((e) => e !== i);
+  function onChangeMethod(index: number) {
+    if (method.includes(index)) {
+      const arr = method.filter((item) => item !== index);
       arr.sort();
       setMethod(arr);
     } else {
       const arr = [...method];
-      arr.push(i);
+      arr.push(index);
       arr.sort();
       setMethod(arr);
     }
   }
 
-  function onChangeMaterial(i: number) {
-    if (material.includes(i)) {
-      const arr = material.filter((e) => e !== i);
+  function onChangeMaterial(index: number) {
+    if (material.includes(index)) {
+      const arr = material.filter((item) => item !== index);
       arr.sort();
       setMaterial(arr);
     } else {
       const arr = [...material];
-      arr.push(i);
+      arr.push(index);
       arr.sort();
       setMaterial(arr);
     }
@@ -98,8 +98,8 @@ export default function Header({ params, setParams, setShowMenu }: IProps) {
   useEffect(() => {
     if (method.length) {
       const temp = [];
-      for (let el of method) {
-        temp.push(Method[el]);
+      for (let element of method) {
+        temp.push(Method[element]);
       }
       const param = temp.toString();
       setParams({
@@ -115,8 +115,8 @@ export default function Header({ params, setParams, setShowMenu }: IProps) {
   useEffect(() => {
     if (material.length) {
       const temp = [];
-      for (let el of material) {
-        temp.push(Material[el]);
+      for (let element of material) {
+        temp.push(Material[element]);
       }
       const param = temp.toString();
       setParams({
@@ -185,34 +185,34 @@ export default function Header({ params, setParams, setShowMenu }: IProps) {
       </DropDownWrapper>
       {showMethod && (
         <CheckBoxContainer>
-          {Method.map((e, i) => (
-            <CheckBoxWrapper key={i}>
+          {Method.map((item, index) => (
+            <CheckBoxWrapper key={item}>
               <CheckBox
                 type="checkbox"
                 id="scales"
                 name="scales"
-                defaultChecked={method.includes(i)}
-                onClick={() => onChangeMethod(i)}
+                defaultChecked={method.includes(index)}
+                onClick={() => onChangeMethod(index)}
               />
-              <label htmlFor="scales">{e}</label>
+              <label htmlFor="scales">{item}</label>
             </CheckBoxWrapper>
           ))}
         </CheckBoxContainer>
       )}
       {showMaterial && (
         <CheckBoxContainer style={{ marginLeft: '105px' }}>
-          {Material.map((e, i) => (
-            <CheckBoxWrapper key={i}>
+          {Material.map((item, index) => (
+            <CheckBoxWrapper key={item}>
               <CheckBox
                 type="checkbox"
                 id="scales"
                 name="scales"
-                defaultChecked={material.includes(i)}
+                defaultChecked={material.includes(index)}
                 onClick={() => {
-                  onChangeMaterial(i);
+                  onChangeMaterial(index);
                 }}
               />
-              <label htmlFor="scales">{e}</label>
+              <label htmlFor="scales">{item}</label>
             </CheckBoxWrapper>
           ))}
         </CheckBoxContainer>
