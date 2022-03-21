@@ -3,22 +3,6 @@ import { GRAY_ARROW, WHITE_ARROW, REFRESH } from '../assets/images/index';
 import HeaderStyle from 'assets/styles/HeaderStyle';
 import { Method, Material, Toggle } from 'components';
 
-interface IProps {
-  params: {
-    method?: string | undefined;
-    material?: string | undefined;
-    status?: string | undefined;
-  };
-  setParams: React.Dispatch<
-    React.SetStateAction<{
-      method?: string | undefined;
-      material?: string | undefined;
-      status?: string | undefined;
-    }>
-  >;
-  setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
 const {
   Title,
   SubTitle,
@@ -37,7 +21,22 @@ const {
   Img,
 } = HeaderStyle;
 
-export default function Header({ params, setParams, setShowMenu }: IProps) {
+interface HeaderProps {
+  params: {
+    method?: string | undefined;
+    material?: string | undefined;
+    status?: string | undefined;
+  };
+  setParams: React.Dispatch<
+    React.SetStateAction<{
+      method?: string | undefined;
+      material?: string | undefined;
+      status?: string | undefined;
+    }>
+  >;
+}
+
+export default function Header({ params, setParams }: HeaderProps) {
   const [showMethod, setShowMethod] = useState<boolean>(false);
   const [showMaterial, setShowMaterial] = useState<boolean>(false);
   const [method, setMethod] = useState<number[]>([]);
