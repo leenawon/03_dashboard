@@ -1,28 +1,17 @@
 import { useEffect, useState } from 'react';
-import { HttpUtil } from '../utils';
+import { HttpUtil } from 'utils';
+import { CardInfoProps } from 'utils/type';
 
-export interface IRequestParamsProps {
+interface IRequestParamsProps {
   url: string;
   method: string;
   params: object;
 }
 
-export interface IRequestInfoProps {
-  id: number;
-  title: string;
-  client: string;
-  due: string;
-  count: number;
-  amount: number;
-  method: Array<string>;
-  material: Array<string>;
-  status: string;
-}
-
-type IResponseProps = {
-  data: Array<IRequestInfoProps>;
+interface IResponseProps {
+  data: Array<CardInfoProps>;
   msg: string;
-};
+}
 
 export default function useRequestApi(args: IRequestParamsProps) {
   const [requestParams, setRequestParams] = useState(args);
