@@ -1,9 +1,5 @@
-import { IRequestInfoProps } from '../hooks';
-import { CardStyle } from '../assets/styles';
-
-interface Props {
-  data: IRequestInfoProps;
-}
+import { CardStyle } from 'assets/styles';
+import { CardInfoProps } from 'utils/type';
 
 const {
   CardContainer,
@@ -21,7 +17,11 @@ const {
   WhiteButton,
 } = CardStyle;
 
-export const Card: React.FC<Props> = ({ data }) => {
+interface CardProps {
+  data: CardInfoProps;
+}
+
+export const Card: React.FC<CardProps> = ({ data }) => {
   return (
     <CardContainer key={data.id}>
       <CardTitleWrapper>
